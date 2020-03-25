@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  git_test_python:
+    build: .
+    container_name: "git_test_python"
+    command: "python git_test.py"
+    # command: "tail -f /dev/null"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./code:/code
